@@ -29,7 +29,9 @@
         --fs-body: 1.25rem;
     }
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: var(--clr-light);
     color: var(--clr-dark);
@@ -148,7 +150,23 @@ header {
     position: absolute;
     right: 1em;
     top: 1em;
-    z-index: ;
+    z-index: 1000;
+}
+.nav-open .nav {
+    transform:translateX(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+.nav-open .hamburger::before{
+    transform: rotate(90deg);
 }
 .hamburger {
     display: block;
